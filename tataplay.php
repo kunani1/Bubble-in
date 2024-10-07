@@ -19,10 +19,9 @@ $options = [
 
 $context  = stream_context_create($options);
 $response = file_get_contents($url, false, $context);
-$dat = json_encode($response);  // Correct encoding
 
-if ($dat === FALSE) {
+if ($response === FALSE) {
     die('Error sending request');
 }
 
-echo $dat;
+echo $response;
