@@ -3,9 +3,6 @@
 $url = 'https://babel-in.xyz/tata/hmac';
 $data = [
     'X-API-Key' => 'babel-072c9452f5c5ea9e15a624f487',
-    'X-Channel-ID' => '{channelID}',
-    'X-auth-token' => '{TPacessToken}',
-    'X-sub-ID' => '{TPsubID}',
 ];
 $jsonData = json_encode($data);
 
