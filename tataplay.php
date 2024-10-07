@@ -1,19 +1,17 @@
 <?php
 
 $url = 'https://babel-in.xyz/tata/channels';
-$data = [
-    'X-API-Key' => 'babel-072c9452f5c5ea9e15a624f487',
-];
-$jsonData = json_encode($data);
+$data = [];  // No data is sent in the body, based on your original code
 
 $options = [
     'http' => [
         'header'  => [
-            "Content-type: application/json",
-            "User-Agent: Babel/5.0"
+            "Content-Type: application/json",
+            "User-Agent: Babel/5.0",
+            "X-API-Key: babel-072c9452f5c5ea9e15a624f487"  // API key added in header
         ],
         'method'  => 'POST',
-        'content' => $jsonData,
+        'content' => json_encode($data),  // Empty array is being encoded into JSON
     ],
 ];
 
